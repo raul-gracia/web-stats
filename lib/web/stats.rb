@@ -1,4 +1,6 @@
-require "web/stats/version"
+# frozen_string_literal: true
+
+require 'web/stats/version'
 
 module Web
   module Stats
