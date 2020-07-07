@@ -13,9 +13,9 @@ module Web
         parsed_data = Parser.parse(file)
         stats = StatsService.gather_stats(parsed_data)
         Printer.print(stats)
-      rescue Weblog::Parser::NoFileError
+      rescue Web::Stats::NoFileError
         puts "File doesn't exist"
-      rescue Weblog::Parser::MalformedFileError
+      rescue Web::Stats::MalformedFileError
         puts 'The file content is malformed'
       end
     end
